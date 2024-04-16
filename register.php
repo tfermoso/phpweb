@@ -21,26 +21,26 @@
 
                                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Register new account</h5>
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="text" name="username" id="username" class="form-control form-control-lg" />
+                                        <input type="text" name="username" id="username" class="form-control form-control-lg" required />
                                         <label class="form-label" for="username">Username</label>
                                     </div>
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="email" name="email" id="form2Example17" class="form-control form-control-lg" />
+                                        <input type="email" name="email" id="form2Example17" class="form-control form-control-lg"  required/>
                                         <label class="form-label" for="form2Example17">Email address</label>
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                                        <input type="password" name="password" id="password" class="form-control form-control-lg password" />
                                         <label class="form-label" for="password">Password</label>
                                     </div>
 
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="password" name="" id="repassword" class="form-control form-control-lg" />
+                                        <input type="password" name="" id="repassword" class="form-control form-control-lg password" />
                                         <label class="form-label" for="repassword">Password Again</label>
                                     </div>
 
                                     <div class="pt-1 mb-4">
-                                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" type="submit">Register</button>
+                                        <button data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" type="submit" id="btnRegister" disabled>Register</button>
                                         <?php
                                         if (isset($error)) {
                                             echo "<p>" . $error . "</p>";
