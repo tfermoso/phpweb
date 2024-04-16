@@ -6,9 +6,16 @@ if (isset($_SESSION["user"])) {
     exit();
 }
 if (isset($_POST["email"])) {
+
+    include("conexion.php");
     $email = $_POST["email"];
     $password = $_POST["password"];
-    if ($email == "admin@admin" && $password == "1234") {
+    $sql = "select * from usuarios where email=? and password=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(1,$email);
+    $stmt->bindParam(2,$password);
+    $stmt->execute();
+    if ($stmt->rowCount()>0) {
         $_SESSION["user"] = $email;
         $_SESSION["datos"] = "otros datos";
         header("Location: user.php");
