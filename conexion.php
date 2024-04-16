@@ -4,7 +4,6 @@ $servername = "localhost"; // Cambia esto si tu servidor MySQL está en otro lug
 $username = "root"; // Cambia esto por tu nombre de usuario de MySQL
 $password = "1234"; // Cambia esto por tu contraseña de MySQL
 $database = "usuarios"; // Cambia esto por el nombre de tu base de datos
-
 try {
     // Crear conexión
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
@@ -27,7 +26,6 @@ try {
     var_dump($result);
     exit();
    */
-
 } catch (PDOException $e) {
     die("Error de conexión: " . $e->getMessage());
 }
