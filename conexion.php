@@ -2,7 +2,7 @@
 // Datos de conexión a la base de datos
 $servername = "localhost"; // Cambia esto si tu servidor MySQL está en otro lugar
 $username = "root"; // Cambia esto por tu nombre de usuario de MySQL
-$password = "123"; // Cambia esto por tu contraseña de MySQL
+$password = "1234"; // Cambia esto por tu contraseña de MySQL
 $database = "usuarios"; // Cambia esto por el nombre de tu base de datos
 
 try {
