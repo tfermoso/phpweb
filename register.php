@@ -49,7 +49,7 @@
                                     </div>
 
                                     <a class="small text-muted" href="#!">Forgot password?</a>
-                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Do you have an account? <a href="index.php" style="color: #393f81;">Login here</a></p>
+                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Do you have an account? <a href="./" style="color: #393f81;">Login here</a></p>
                                     <a href="#!" class="small text-muted">Terms of use.</a>
                                     <a href="#!" class="small text-muted">Privacy policy</a>
                                 </form>
