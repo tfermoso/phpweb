@@ -10,6 +10,8 @@ if(isset($_POST["email"])){
     $pstm->bindParam(1,$user);
     $pstm->bindParam(2,$email);
     $pstm->bindParam(3,$pass);
+    var_dump($pstm);
+    exit();
     try{
        $pstm->execute();
     if($pstm->rowCount()>0){
@@ -53,7 +55,7 @@ if(isset($_POST["email"])){
                                         <label class="form-label" for="username">Username</label>
                                     </div>
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="email" name="email" id="form2Example17" class="form-control form-control-lg"  required/>
+                                        <input type="email" name="email" id="email" class="form-control form-control-lg"  required/>
                                         <label class="form-label" for="form2Example17">Email address</label>
                                     </div>
 
