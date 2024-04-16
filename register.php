@@ -1,3 +1,31 @@
+<?php
+if(isset($_POST["email"])){
+    include("conexion.php");
+    $user=$_POST["username"];
+    $email=$_POST["email"];
+    $pass=$_POST["password"];
+    
+    $sql="insert into usuarios (username,email,password) values (?,?,?)";
+    $pstm=$conn->prepare($sql);
+    $pstm->bindParam(1,$user);
+    $pstm->bindParam(2,$email);
+    $pstm->bindParam(3,$pass);
+    try{
+       $pstm->execute();
+    if($pstm->rowCount()>0){
+        header("Location: ./");
+        exit();
+    }else{
+        $error="No se ha podido crear el usuario";
+    } 
+    }catch(PDOException $e){
+        $error="No se ha podido crear el usuario ".$e->getMessage();
+    }
+    
+
+}
+?>
+
 <?php include("./templates/header.php"); ?>
 
 <section class="vh-100" style="background-color: #9A616D;">
