@@ -8,12 +8,12 @@ $(".password").keyup((e) => {
 
 $("#email").change(()=>{
     let email=$("#email").val();
-    fetch('procesar.php', {
+    fetch('comprobaremail.php', {
         method: 'POST', // Método HTTP para la petición
         headers: {
             'Content-Type': 'application/json' // Tipo de contenido
         },
-        body: JSON.stringify({ dato: 'Hola desde AJAX' }) // Datos a enviar al servidor
+        body: JSON.stringify({ dato: email }) // Datos a enviar al servidor
     })
     .then(response => {
         // Verificar si la respuesta es exitosa
@@ -26,6 +26,7 @@ $("#email").change(()=>{
     .then(data => {
         // Manejar la respuesta del servidor
         console.log(data);
+
     })
     .catch(error => {
         // Manejar errores
